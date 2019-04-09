@@ -39,20 +39,15 @@
 7. 代码块：用三个反引号包起来，且两边的反引号单独占一行
 
 # Git常用操作命令
-1. $git clone <文件名>
-2. git status
-3. git add index.html
-4. git commit
-5. git log
-6. git reset
-7. git branch： 查看本地所有分支
-8. git checkout
-9. git into
-10. git remote add origin
-11. git push -u orgin master
-
-# html
-
-
-
-# CSS
+### 1. git clone <文件名>  :检出仓库
+### 2. git status  :查看当前状态
+### 3. git add [文件名] [-A] 
+### 4. git commit [-m<更新原因>] ：将创建或者修改的文件添加到缓冲区
+### 5. git log ：查看日记
+### 6. git reset [--hard] : 退回修改前的版本
+### 7. git branch： 查看本地所有分支
+### 8. git checkout -b <新建> 切换到所创建的分支:
+### 9. git into :初始化
+### 10. git remote add origin<url>:连接本地仓库与远程仓库
+### 11. git push -u origin master
+### 12. git merge origin :合并文件
