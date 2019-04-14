@@ -133,4 +133,21 @@
 - 实现块级元素居中
        1. margin：0  auto
        2. margin-left的值等于margin-right
+#### 10. 块级元素的class可以多个，而id只能有一个
+  <div class="aa  bb"></div>
+#### 11. 属性
+         float：left/right (脱离文档流)
+         position：static 静态  relative 相对位置，可以实现偏移（+left：10px；）  fixed 固定不随滚动框影响
+         >absolute  绝对定位（脱离文档流）
+         ```
+         <div>（加position：relative）
+              <div>加position：absolute，位置是相对于父元素div定位</div>
+           <div>
+          ```
+          opacity：1（完全不透明）0（完全透明）
+          若子元素margin>父元素margin，解决父子塌陷-》overflow：hidden；
+          文字超出<div>用overflow：hidden（截掉超出部分）
+          white-spacing：nowrap（文字不换行）
+          letter-spacing：（字间距）
 
+​          
