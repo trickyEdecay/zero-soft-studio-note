@@ -1,7 +1,7 @@
 # git的使用
 
 ## 初始化
-
+ 
 `$ git init`
 在所在目录生成`.git`文件，所在的目录为工作区（不包括.git），.git里包括master区和stay区
 
