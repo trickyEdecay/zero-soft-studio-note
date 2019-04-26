@@ -24,10 +24,8 @@ a:active{
     color:yellow;
 }
 ```
-`当我定义visited、link顺序时，显示的页面和正常情况没有区别`
-`当我定义的顺序是a:visited、a:hover、a:link，这时会发现：`
-`把鼠标放到未访问过的蓝色链接上时，它并不变成绿色，只有放在已访问的红色链接上，`
-`链接才会变绿`
+注意：当我定义visited、link顺序时，显示的页面和正常情况没有区别
+当我定义的顺序是a:visited、a:hover、a:link，这时会发现：把鼠标放到未访问过的蓝色链接上时，它并不变成绿色，只有放在已访问的红色链接上，链接才会变绿
 ***定义时，应该是link、visited、hover、active的顺序（LOVE hate）*** 
 
 5. :focus 获得焦点(像input、a标签这种鼠标点击有效果的都可以获得焦点)
@@ -36,7 +34,12 @@ input:focus{
     background:blue;
 }
 ```
-6. tabindex属性（忘记是怎么理解的了）
+6. tabindex：在用tab键导航时，tabindex属性规定元素tab键控制次序，支持<a>、<button>、<input>标签
+```html
+<a href="https://www.baidu.com/" tabindex="2">百度</a>
+<a href="http://www.google.com/" tabindex="1">Google</a>
+<a href="https://home.firefoxchina.cn/" tabindex="3">火狐</a>
+```
 
 7. * :first-child
    * :first-of-type
@@ -50,8 +53,8 @@ input:focus{
 ## 盒子模型
 1. ![盒子模型](https://i.loli.net/2019/04/19/5cb988e813c54.jpg)
 2. height和width=content+border+padding
-3. border有colo、width、style三个主要属性
- >clolr是指定border的颜色
+3. border有color、width、style三个主要属性
+ >color是指定border的颜色
  >width是border粗细程度
  >style属性可以设置为none(不显示)、solid(实线)等等
 
@@ -64,7 +67,7 @@ input:focus{
    ![外边距合并](https://i.loli.net/2019/04/19/5cb99bc3aa8c1.png)
    ***只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并***
 
-7. border-sizing:border-box: 告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px,那么这100px会包含其它的border和padding，内容区的实际宽度会是width减去border +  padding的计算值。(content-box是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。)
+7. box-sizing:border-box  告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px,那么这100px会包含其它的border和padding，内容区的实际宽度会是width减去border +  padding的计算值。(content-box是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。)
 
 
 ## 可替换元素和不可替换元素
@@ -90,9 +93,10 @@ input:focus{
 7. 一旦设置width，会自动补上margin-right
 8. 让一个块级元素居中的方法：margin-left：auto、margin-right：auto或者是margin:0 auto
 ## 基线
-   若两个盒子之间一个包括文字，一个不包括，则会出现两个盒子一下一上的情况，这时候要在不包括文字的盒子里面添加一个属性vettical-align:bottom
+   若两个盒子其中有一个不含文字，则会出现两个盒子一下一上的情况，这时候要在不包括文字的盒子里面添加一个属性vettical-align:bottom
 
 ## 布局
+  ### position:这个属性是定义元素的定位类型，任何元素都可以定位
 1. position:static(默认值)
 2. position:absolute  脱离文档流，生成绝对定位的元素（忘记相对谁定位了？？）
 3. position:relative  相对于原来位置移动，元素设置此属性之后仍然处在文档流中，不影响其他元素的布局
