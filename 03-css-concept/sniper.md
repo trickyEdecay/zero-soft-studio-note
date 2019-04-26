@@ -116,24 +116,24 @@ html的内容排列顺序从左到右，从上到下。
 	opacity:0.5;      /*0.0 （完全透明）到 1.0（完全不透明）*/
 	outline:none;     /*去除点击后的边框*/
 	overflow:hidden;   /*超出部分隐藏*/
-    text-overflow:ellipisis;   /*应用于单行文本  溢出显示省略号*/
-    white-space:nowrap;    /*当宽度不够时不换行*/
-    					   /*pre 保留空格*/
+	text-overflow:ellipisis;   /*应用于单行文本  溢出显示省略号*/
+	white-space:nowrap;    /*当宽度不够时不换行*/
+						   /*pre 保留空格*/
 	overflow:scroll;     /*出现滚动条*/
-  						 /*overflow-y:auto; 自动处理*/	
+						/*overflow-y:auto; 自动处理*/	
 	overflow:visible;   /*默认不处理*/
-    letter-spacing:2px;   /*字体间距*/
-    text-decoration:underline;  /*下划线*/
-    							/*none 不修饰*/
+	letter-spacing:2px;   /*字体间距*/
+	text-decoration:underline;  /*下划线*/
+								/*none 不修饰*/
 }
 ```
 **设置下面的样式父元素和子元素不会出现塌陷**
 
 ```css
 .class{
-    overflow:hidden;
-    float:left/right;
-    position:absolute/fixed;    /*fixed表示不会随着滚动条滚动而改变布局*/
+	overflow:hidden;
+	float:left/right;
+	position:absolute/fixed;    /*fixed表示不会随着滚动条滚动而改变布局*/
 }
 ```
 
@@ -153,29 +153,29 @@ flex item     直属子元素
 flex container{
 	display:flex;
 	flex-direction:column;
-    flex-direction:row;   /*默认*/
-    flex-direction:row-reverse;  /*改变主轴方向*/
-    flex-wrap:nowrap;	/*默认*/
-    flex-wrap:wrap;    /*子元素超出宽度（高度）会换行*/
-    flex-wrap:wrap-reverse;   /*改变交叉轴方向*/
-    				   /*主轴与交叉轴垂直*/
-    justify-content:center;   /*控制主轴上元素的排列方式为水平居中*/
-                  /*flex-start：主轴的开始  flex-end：主轴的末端*/
-    			  /*space-between：两端对齐*/
-    align-items:center;  /*控制交叉轴上的排列方式为水平居中*/
-    			  /*flex-start：交叉轴的开始  flex-end：交叉轴的末端*/
-    			  /*默认：stretch：当子元素没设置高度时，自动拉伸*/
-    align-content:center; /*多条主轴相对交叉轴*/
-    			  /*flex-start：交叉轴的开始  flex-end：交叉轴的末端*/
-    			  /*默认：stretch*/
+	flex-direction:row;   /*默认*/
+	flex-direction:row-reverse;  /*改变主轴方向*/
+	flex-wrap:nowrap;	/*默认*/
+	flex-wrap:wrap;    /*子元素超出宽度（高度）会换行*/
+	flex-wrap:wrap-reverse;   /*改变交叉轴方向*/
+					   /*主轴与交叉轴垂直*/
+	justify-content:center;   /*控制主轴上元素的排列方式为水平居中*/
+							/*flex-start：主轴的开始  flex-end：主轴的末端*/
+				  /*space-between：两端对齐*/
+	align-items:center;  /*控制交叉轴上的排列方式为水平居中*/
+				  /*flex-start：交叉轴的开始  flex-end：交叉轴的末端*/
+				  /*默认：stretch：当子元素没设置高度时，自动拉伸*/
+	align-content:center; /*多条主轴相对交叉轴*/
+				  /*flex-start：交叉轴的开始  flex-end：交叉轴的末端*/
+				  /*默认：stretch*/
 }
 ```
 ```css
 flex item{
-    flex-grow:1;   /*默认为0； */
-    flex-shrink:1;
-    flex-basis:;   /*相当于宽度或者高度 */
-    flex: 0 0 20%;
-    /* flex-grow | flex-shrink | flex-basis*/
+	flex-grow:1;   /*默认为0； */
+	flex-shrink:1;
+	flex-basis:;   /*相当于宽度或者高度 */
+	flex: 0 0 20%;
+	/* flex-grow | flex-shrink | flex-basis*/
 }
 ```
